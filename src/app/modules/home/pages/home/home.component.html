@@ -1,0 +1,6 @@
+<div class="flex flex-row flex-wrap " [ngStyle]="{direction:language.language=='ar'?'rtl':'ltr'}" >
+    <div  *ngFor="let news of news" class="sm:w-6/12 lg:w-1/4 md:w-1/3 px-2 py-4">
+        <app-card [LastModification]="news.LastModification" [creationDate]="news.PublishDate" [title]="language.language =='ar'?news.ArNewsTitle:news.EnNewsTitle" [text]="language.language =='ar'?news.ArNewsDescription:news.EnNewsDescription " [image]="news.ImageUrl"[tags]="getTags(news.Tid,language.language)"></app-card>
+    </div>
+
+</div>

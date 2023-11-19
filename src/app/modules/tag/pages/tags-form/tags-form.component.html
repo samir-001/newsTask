@@ -1,0 +1,46 @@
+
+
+<div class="w-5/6 m-auto ">
+  <form class="w-full dark:bg-black"  [formGroup]="tag" (ngSubmit)="onSubmit()">
+    <div class="flex flex-wrap -mx-3 mb-6" >
+      <div class="w-full  md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide border-gray-300 dark:text-gray-300 text-gray-700 text-xs font-bold mb-2" for="EnTagName">
+            Tag Name
+          </label>
+          <input class="appearance-none block w-full border dark:border-neutral-600 border-gray-300   dark:bg-gray-700 dark:text-gray-100 bg-gray-50 text-gray-700   rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-50" id="EnTagName" type="text" placeholder="Tag name" formControlName="EnTagName">
+          <p class="text-red-500 text-xs italic" *ngIf="!tag.get('EnTagName')?.valid &&tag.get('EnTagName')?.touched">Please fill out this field.</p>
+        
+      </div>
+      <div class="w-full md:w-1/2 px-3">
+        <label class="block uppercase tracking-wide dark:text-gray-300 text-gray-700 text-xs font-bold mb-2" for="ArTagName">
+          أسم الوسم 
+        </label>
+        <input class="appearance-none block w-full dark:border-neutral-600  border border-gray-300 dark:bg-gray-700 dark:text-gray-100 bg-gray-50  text-gray-700  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-50" id="ArTagName" type="text" placeholder="اسم الوسم" formControlName="ArTagName">
+        <p class="text-red-500 text-xs italic" *ngIf="!tag.get('ArTagName')?.valid &&tag.get('ArTagName')?.touched">هذا الحقل مطلوب</p>
+
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full px-3">
+        <label class="block uppercase tracking-wide dark:text-gray-300 text-gray-700 text-xs font-bold mb-2" for="EnTagDescription">
+          Tag Description
+        </label> 
+        <textarea id="EnTagDescription" rows="4" class="block p-2.5 mb-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Tag Description" formControlName="EnTagDescription"></textarea>
+        <p class="text-red-500 text-xs italic" *ngIf="!tag.get('EnTagDescription')?.valid &&tag.get('EnTagDescription')?.touched">Please fill out this field.</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full px-3">
+        <label class="block uppercase tracking-wide dark:text-gray-300 text-gray-700 text-xs font-bold mb-2 outline-none" for="ArTagDescription">
+         وصف الوسم باللغة العربية 
+        </label>
+        <textarea id="ArTagDescription" rows="4" class="block p-2.5 mb-3 w-full text-sm text-gray-900 border-gray-300 bg-gray-50 rounded-lg border outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="الوصف باللغة العربية" formControlName="ArTagDescription"></textarea>
+        <p class="text-red-500 text-xs italic" *ngIf="!tag.get('ArTagDescription')?.valid &&tag.get('ArTagDescription')?.touched">هذا الحقل مطلوب</p>
+      </div>
+    </div>
+
+
+    <button type="submit" class="h-10 px-4  text-md text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800 disabled:bg-slate-400" [disabled]="!tag.valid">submit</button>
+
+  </form>
+</div>

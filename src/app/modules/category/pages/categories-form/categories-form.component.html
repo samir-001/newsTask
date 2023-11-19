@@ -1,0 +1,66 @@
+
+
+<div class="w-5/6 m-auto">
+    <form class="w-full dark:bg-black"  [formGroup]="category" (ngSubmit)="onSubmit()">
+      <div class="flex flex-wrap -mx-3 mb-6" >
+        <div class="w-full  md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide border-gray-300 dark:text-gray-300 text-gray-700 text-xs font-bold mb-2" for="EnCategoryName">
+              Category Name
+            </label>
+            <input class="appearance-none block w-full border dark:border-neutral-600 border-gray-300   dark:bg-gray-700 dark:text-gray-100 bg-gray-50 text-gray-700   rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-50" id="EnCategoryName" type="text" placeholder="category name" formControlName="EnCategoryName">
+            <p class="text-red-500 text-xs italic" *ngIf="!category.get('EnCategoryName')?.valid &&category.get('EnCategoryName')?.touched">Please fill out this field.</p>
+          
+        </div>
+        <div class="w-full md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide dark:text-gray-300 text-gray-700 text-xs font-bold mb-2" for="ArCategoryName">
+            أسم القسم 
+          </label>
+          <input class="appearance-none block w-full dark:border-neutral-600  border border-gray-300 dark:bg-gray-700 dark:text-gray-100 bg-gray-50  text-gray-700  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-50" id="ArCategoryName" type="text" placeholder="اسم القسم" formControlName="ArCategoryName">
+          <p class="text-red-500 text-xs italic" *ngIf="!category.get('ArCategoryName')?.valid &&category.get('ArCategoryName')?.touched">هذا الحقل مطلوب</p>
+
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label class="block uppercase tracking-wide dark:text-gray-300 text-gray-700 text-xs font-bold mb-2" for="EnCategoryDescription">
+            Category Description
+          </label> 
+          <textarea id="EnCategoryDescription" rows="4" class="block p-2.5 mb-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Category Description" formControlName="EnCategoryDescription"></textarea>
+          <p class="text-red-500 text-xs italic" *ngIf="!category.get('EnCategoryDescription')?.valid &&category.get('EnCategoryDescription')?.touched">fill the field please</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full px-3">
+          <label class="block uppercase tracking-wide dark:text-gray-300 text-gray-700 text-xs font-bold mb-2 outline-none" for="ArCategoryDescription">
+            القسم باللغة العربية
+          </label>
+          <textarea id="ArCategoryDescription" rows="4" class="block p-2.5 mb-3 w-full text-sm text-gray-900 border-gray-300 bg-gray-50 rounded-lg border outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="الوصف باللغة العربية" formControlName="ArCategoryDescription"></textarea>
+          <p class="text-red-500 text-xs italic" *ngIf="!category.get('ArCategoryDescription')?.valid &&category.get('ArCategoryDescription')?.touched">هذا الحقل مطلوب</p>
+        </div>
+      </div>
+      <div class="inline-flex items-center">
+        <div class="relative inline-block h-4 w-8 cursor-pointer rounded-full">
+          <input
+            id="hasChildren"
+            type="checkbox"
+            formControlName="hasChildren"
+            class="peer absolute h-4 w-8 cursor-pointer appearance-none rounded-full bg-blue-gray-100 transition-colors duration-300 checked:bg-blue-500 peer-checked:border-blue-500 peer-checked:before:bg-blue-500 bg-gray-100 dark:bg-gray-700"
+          />
+          <label
+            for="hasChildren"
+            class="before:content[''] absolute top-2/4 -left-1 h-5 w-5 -translate-y-2/4 cursor-pointer rounded-full border border-blue-gray-100 bg-white shadow-md transition-all duration-300 before:absolute before:top-2/4 before:left-2/4 before:block before:h-10 before:w-10 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity hover:before:opacity-10 peer-checked:translate-x-full peer-checked:border-blue-500 peer-checked:before:bg-blue-500"
+          >
+            <div
+              class="top-2/4 left-2/4 inline-block -translate-x-2/4 -translate-y-2/4 rounded-full p-5"
+              data-ripple-dark="true"
+            ></div>
+          </label>
+        </div>
+        <p class="mx-3">has Children</p>
+      </div>
+
+      <button type="submit" class="h-10 px-4 block mt-7  text-md text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800 disabled:bg-indigo-400" [disabled]="!category.valid">submit</button>
+  
+    </form>
+  </div>
+  

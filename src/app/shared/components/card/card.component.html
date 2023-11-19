@@ -1,0 +1,18 @@
+<div style="min-height: 395px;" class=" rounded overflow-hidden shadow-lg dark:border dark:border-gray-700 m-1 " >
+    <img class="w-full sa-h" [src]="'../../../../assets/images/'+image" alt="Sunset in the mountains">
+    <div class="px-3 py-4" >
+      <div  class="font-bold text-xl mb-2  dark:text-gray-300 	">{{title}}</div>
+      <div class="flex flex-row justify-between">
+
+        <small class="dark:text-white" > last edit: {{LastModification}}</small>
+      </div>
+      <p [style.direction]="languge.language=='ar'?'rtl':'ltr'" style="min-height: 50px;" class="text-gray-700 text-base dark:text-gray-300 	">
+      {{text.slice(0,50)}}      
+      <span class="cursor-pointer text-indigo-300">...read more</span>
+      </p>
+    </div>
+    <div class="px-4 pt-4 pb-2 flex flex-row  justify-center" >
+      <span   *ngFor="let tag of tags" class="cursor-pointer inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{tag}}</span>
+    </div>
+  </div>
+  

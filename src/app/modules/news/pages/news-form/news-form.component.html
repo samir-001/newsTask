@@ -1,0 +1,73 @@
+
+
+  <form class="w-full dark:bg-black " [formGroup]="news" (ngSubmit)="onSubmit()">
+    <div class="flex flex-wrap -mx-3 mb-6" >
+      <div class="w-full  md:w-1/2 px-3 mb-6 md:mb-0">
+        <label class="block uppercase tracking-wide  dark:text-gray-300 text-gray-700 text-xs font-bold mb-2" for="EnNewsTitle">
+         english Title
+        </label>
+        <input class="appearance-none block w-full    border border-gray-300 dark:bg-gray-700 dark:border-neutral-600 dark:text-gray-100 bg-gray-50  text-gray-700  rounded py-3 px-4 mb-3 leading-tight focus:outline-none " id="EnNewsTitle" type="text" placeholder="english Title" formControlName="EnNewsTitle">
+        <p class="text-red-500 text-xs italic" *ngIf="!news.get('EnNewsTitle')?.valid &&news.get('EnNewsTitle')?.touched">Please fill out this field.</p>
+      </div>
+      <div class="w-full md:w-1/2 px-3">
+        <label class="block uppercase tracking-wide border-gray-300 dark:text-gray-300 text-gray-700 text-xs font-bold mb-2" for="ArNewsTitle">
+          العنوان بالعربية
+        </label>
+        <input class="appearance-none block w-full border border-gray-300  dark:border-neutral-600 dark:bg-gray-700 dark:text-gray-100 bg-gray-50 text-gray-700   rounded py-3 px-4 mb-3 leading-tight focus:outline-none " id="ArNewsTitle" type="text"  placeholder="العنوان بالعربية" formControlName="ArNewsTitle">
+        <p class="text-red-500 text-xs italic" *ngIf="!news.get('ArNewsTitle')?.valid &&news.get('ArNewsTitle')?.touched">هذا الحقل مطلوب.</p>
+      
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full px-3">
+        <label class="block uppercase tracking-wide dark:text-gray-300 text-gray-700 text-xs font-bold mb-2" for="ArNewsDescription">
+          الوصف باللغة العربية
+        </label>
+        <textarea id="ArNewsDescription" rows="4" class="block p-2.5 mb-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "  placeholder="الوصف باللغة العربية" formControlName="ArNewsDescription"></textarea>
+        <p class="text-red-500 text-xs italic" *ngIf="!news.get('ArNewsDescription')?.valid &&news.get('ArNewsDescription')?.touched">هذا الحقل مطلوب</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full px-3">
+        <label class="block uppercase tracking-wide dark:text-gray-300 text-gray-700 text-xs font-bold mb-2 outline-none" for="EnNewsDescription">
+          Description
+        </label>
+        <textarea id="EnNewsDescription" rows="4" class="block p-2.5 mb-3 w-full text-sm text-gray-900 border-gray-300 bg-gray-50 rounded-lg border outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "placeholder="Description" formControlName="EnNewsDescription"></textarea>
+        <p class="text-red-500 text-xs italic" *ngIf="!news.get('EnNewsDescription')?.valid &&news.get('EnNewsDescription')?.touched">Make it as long and as crazy as you'd like</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-2">
+
+      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <label class="block uppercase tracking-wide dark:text-gray-300 text-gray-700 text-xs font-bold mb-2" for="category">
+          category
+        </label>
+        <div class="relative">
+          <select class="block appearance-none w-full bg-gray-200 border border-gray-300 dark:bg-gray-700 dark:text-gray-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="category" formControlName="Cid">
+            <option *ngFor="let cat of categories" [value]="cat.id">{{cat.ArCategoryName}}</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+          </div>
+        </div>
+      </div>
+
+   <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+  <label for="formFile"class="block uppercase tracking-wide dark:text-gray-300  text-gray-700 text-xs font-bold mb-2">upload Image</label>
+  <input class="relative m-0 block w-full min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-gray-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.6rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-gray-700 dark:file:text-neutral-100" (change)="onFileSelected($event)" type="file" id="formFile" />
+  </div>
+
+    </div>
+    <div class=" my-6 min-h-9">
+      <label class="block uppercase tracking-wide dark:text-gray-300 text-gray-700 text-xs font-bold ">selectd tags</label>
+      <div *ngIf="news.controls['Tid'].value.length<1">no tags selected </div>
+      <span *ngFor="let tag of news.controls['Tid'].value" class=" cursor-pointer m-1 inline-block items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20" (click)="removeTage(tag)">{{getTag(tag).ArTagName}}</span>
+    </div>
+    <div class=" my-6">
+      <label class="block uppercase tracking-wide dark:text-gray-300 text-gray-700 text-xs font-bold ">all tags</label>
+      <span *ngFor="let tag of avilableTag" class="cursor-pointer m-1 inline-block items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20" (click)="addTage(tag.id)">{{tag.ArTagName}}</span>
+    </div>
+    <button type="submit"  class="cursor-pointer h-10 px-4  text-md text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800" type="submit">submit</button>
+    
+  </form>
+

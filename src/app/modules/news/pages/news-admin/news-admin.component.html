@@ -1,0 +1,6 @@
+<div class="mt-40">
+
+    <button class="mb-10 dark:text-white" (click)="goToNew()">new</button>
+    <br>
+    <app-table [data]='news' [tableColumes]="['id','ArNewsDescription','LastModification','PublishDate','EnNewsDescription']" (edit)="editNews($event)" (delete)="confirmAction($event,'delete')"></app-table>
+</div>

@@ -1,0 +1,73 @@
+<div class="container">
+
+    <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon" (click)="addNew()">
+        <mat-icon>add</mat-icon>
+    </button>
+    <div>
+
+        <div class="sa-mt-60 sa-dflex-sb">
+            
+            
+            <mat-form-field >
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+        </mat-form-field>
+        
+    </div>
+    
+    <div class="mat-elevation-z8" >
+        <table mat-table [dataSource]="dataSource" matSort [dir]="currentLang =='ar'?'rtl':'ltr'">
+            
+            <!-- ID Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'id'|translate}} </th>
+                <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+            </ng-container>
+            
+            <!-- Progress Column -->
+            <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>  {{'category'|translate}}</th>
+          <td mat-cell *matCellDef="let row"> {{currentLang == "en"?row.enCategory:row.arCategory}} </td>
+        </ng-container>
+        
+        <!-- Progress Column -->
+        <ng-container matColumnDef="arQuestion">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>   {{'question'|translate}} </th>
+          <td mat-cell *matCellDef="let row"> {{currentLang == "en"?row.enQuestion:row.arQuestion}}</td>
+        </ng-container>
+        
+        <!-- Name Column --> 
+        <ng-container matColumnDef="arAnswer" >
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>   {{'answer'|translate}} </th>
+            <td mat-cell *matCellDef="let row"> {{currentLang == "en"?row.enAnswer:row.arAnswer}}</td>
+        </ng-container>
+        
+        <!-- Fruit Column -->
+        <ng-container matColumnDef="control">
+            <th mat-header-cell *matHeaderCellDef >  {{('action'|translate)}} </th>
+            <td mat-cell *matCellDef="let row">
+                <div class="sa-d-flex">
+                    <button mat-raised-button color="primary" (click)="updateQuestion(row)">{{currentLang == "en"?"edit":"تعديل"}}</button>
+                    <button mat-raised-button color="primary" (click)="openDialog(row,'toggleVisibilty')">{{row.visibility?('hide' |translate):('show' |translate)}}</button>
+                    <button mat-raised-button color="warn"  (click)="openDialog(row,'delete')">{{"delete"|translate}}</button>
+                </div>
+            </td>
+        </ng-container>
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+    </table>
+        
+        <mat-paginator [length]="dataSetCount" [pageSize]="5" [pageSizeOptions]="[5, 10]" aria-label="Select page of users"></mat-paginator>
+</div>
+</div>
+    <div style="text-align: center;" *ngIf="dataSetCount<1">
+        {{'noDataFound'|translate}}
+    </div>
+</div>
+

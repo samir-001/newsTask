@@ -1,0 +1,62 @@
+<div class="container dark:!bg-slate-400" >
+  
+<ng-container *ngIf="!ErrorMessage">
+  
+<button mat-raised-button class=" !m-2" (click)="increaseFontSize()" >+</button>
+<button mat-raised-button class="!m-2"  (click)="resetFontsize()">reset</button>
+<button mat-raised-button   class=" !m-2"  (click)="decreaseFontSize()">-</button>
+
+  <cdk-accordion class=" accordion" [dir]="language=='ar'?'rtl':'ltr'"  >
+    <div class="sa-m-5" *ngIf="language ==='ar'">
+      <button [style.fontSize]="fontsize+'px'" class="sa-m-5 dark:!bg-slate-400"  mat-raised-button  (click)="filterData()">الكل</button>
+      <button [style.fontSize]="fontsize+'px'" class="sa-m-5  dark:!bg-slate-400"  mat-raised-button *ngFor="let cat of arCategory" (click)="filterData(cat)">{{cat}}</button>
+    </div>
+    <div class="sa-m-5"  *ngIf="language ==='en'">
+      <button [style.fontSize]="fontsize+'px'" class="sa-m-5  dark:!bg-slate-400"  mat-raised-button (click)="filterData()">all</button>
+      <button [style.fontSize]="fontsize+'px'"  class="sa-m-5  dark:!bg-slate-400" mat-raised-button *ngFor="let cat of enCategory" (click)="filterData(cat)">{{cat}}</button>
+    </div>
+
+    <cdk-accordion-item 
+    *ngFor="let item of obs|async; let index = index;"
+    #accordionItem="cdkAccordionItem"
+      class=" accordion-item"
+      role="button"
+      tabindex="0"
+      [attr.id]="'accordion-header-' + index"
+      [attr.aria-expanded]="accordionItem.expanded"
+      [attr.aria-controls]="'accordion-body-' + index">
+
+        <div [style.fontSize]="fontsize+'px'" class=" accordion-item-header" (click)="accordionItem.toggle()">
+          {{ language =='ar'?item.arQuestion:item.enQuestion  }}
+        <span class=" accordion-item-description">
+          Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+        </span>
+      </div>
+      <div
+        [style.fontSize]="fontsize+'px'"
+        class=" accordion-item-body"
+        role="region"
+        [style.display]="accordionItem.expanded ? '' : 'none'"
+        [attr.id]="'accordion-body-' + index"
+        [attr.aria-labelledby]="'accordion-header-' + index">
+        {{ language =='ar'?item.arAnswer:item.enAnswer  }}
+      </div>
+    </cdk-accordion-item>
+    
+</cdk-accordion>
+<div  [class.hide]="!(pageSize < dataLength)">
+
+  
+  <mat-paginator [length]="100"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  aria-label="Select page"
+  changePageSiz
+  
+  >
+</mat-paginator>     
+</div>
+</ng-container> 
+<div class="sa-center" *ngIf="!!ErrorMessage">
+  {{ErrorMessage}}
+</div> 
+</div>

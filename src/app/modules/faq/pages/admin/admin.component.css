@@ -1,0 +1,34 @@
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 50%;
+}
+
+td, th {
+  width: 20%;
+}
+.d-flex{
+  display: flex;
+  gap:10px
+}
+.sa-d-flex {
+  display: flex;
+  gap :5px
+  }
+.sa-dflex-sb {
+  display: flex;
+  justify-content: space-between;
+  }
+
+
+.sa-mt-60{
+  margin-top:60px ;
+
+}
+.hide{
+  visibility: hidden;
+  height: 0;
+}

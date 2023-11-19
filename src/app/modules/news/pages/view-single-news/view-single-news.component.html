@@ -1,0 +1,16 @@
+<div class="flex  gap-2 sm:flex-col-reverse lg:flex-row dark:text-white" [style.direction]="language.language =='ar'?'rtl':'ltr'">
+    <div>
+        <p class="font-bold text-lg" >{{language.language =='ar'? news.ArNewsTitle : news.EnNewsTitle }}</p>
+        <span class="font-semibold text-md"  >{{ language.language =='ar'?category.ArCategoryName:category.EnCategoryName }}</span>
+        <div>{{language.language =='ar'? news.ArNewsDescription : news.EnNewsDescription }}</div>
+        <span class="cursor-pointer m-1 inline-block items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20" *ngFor="let tag of tags">{{language.language =='ar'?tag.ArTagName:tag.EnTagName }}</span>
+    </div>
+    
+        <div class="   h-600" >
+            <img class="w-600 h-600 mx-auto" [src]="'../../../../../assets/images/'+news.ImageUrl" [alt]="news.ArNewsTitle" srcset="">
+            <div class="flex flex-row justify-between my-2">
+                <small>{{  ('publishedAt'|translate ) +": "+ news.PublishDate  }} </small>
+                <small>{{('lastUpdate'|translate) +": "+ news.LastModification}}</small>
+            </div>
+        </div>
+</div>

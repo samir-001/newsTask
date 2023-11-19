@@ -1,0 +1,6 @@
+
+<button class="mb-10 dark:text-white" (click)="goToNew()">new</button>
+<br>
+<app-table [data]='tags' [tableColumes]="['id','EnTagName','EnTagDescription']" (edit)="editTag($event) " (delete)="confirmAction($event,'delete')"></app-table>
+
+    

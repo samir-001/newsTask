@@ -1,0 +1,4 @@
+
+<button class="mb-10 dark:text-white" (click)="goToNew()">new</button>
+<br>
+<app-table [data]='categories' [tableColumes]="['id','EnCategoryName','EnCategoryDescription']" (edit)="editCategory($event)" (delete)="confirmAction($event,'delete')"></app-table>

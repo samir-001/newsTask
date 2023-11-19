@@ -1,0 +1,162 @@
+{
+  "tags": [
+    {
+      "id": 1,
+      "ArTagName": "رياضة",
+      "EnTagName": "sport",
+      "ArTagDescription": "نادى بيك سيجيد المجرى يُكرم المدير الفنى لمنتخب مصر لكرة اليد الإثنين، 13 نوفمبر 2023 08:40 م. ترتيب جدول دورى المحترفين بعد مباريات اليوم.\n",
+      "EnTagDescription": "Sports Illustrated swimsuit model Carol Alt, 62, shares FIRST image for OnlyFans... and it feels like a sizzling Playboy pinup shoot\n"
+    },
+    {
+      "id": 2,
+      "ArTagName": "المال",
+      "EnTagName": "finance",
+      "ArTagDescription": "الأسواق العالمية مكاسب للأسهم الآسيوية وسط ترقب بيانات التضخم الأميركية غداً · نمو طفيف لأرباح سالك بدبي إلى 254.7 مليون درهم · انخفاض صافي ربح \"طاقة\" بنسبة ...",
+      "EnTagDescription": "Finance provides real-time market quotes, international exchanges, up-to-date financial news, and analytics to help you make more informed trading and investment …\n\n"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "ArCategoryName": "جراحة",
+      "EnCategoryName": "surgery",
+      "EnCategoryDescription": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse a quae asperiores eaque expedita nemo! Mollitia atque quod quae dolores dignissimos omnis ex vero quos tempora. Optio illo eaque odit.",
+      "ArCategoryDescription": "تُصنف الإجراءات الجراحية بحسب عدة عوامل منها مدى خطورة الحالة، ونوع الإجراء، والعضو أو الجهاز المراد معالجته، ودرجة الغازية (درجة اختراق الجسم)، والأدوات المُستخدمة.\n",
+      "hasChildren": true
+    },
+    {
+      "id": 2,
+      "ArCategoryName": "عيون",
+      "EnCategoryName": "aies",
+      "EnCategoryDescription": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse a quae asperiores eaque expedita nemo! Mollitia atque quod quae dolores dignissimos omnis ex vero quos tempora. Optio illo eaque odit.",
+      "ArCategoryDescription": "bاختر افضل دكتور عيون في مصر حسب سعر الكشف، التأمين التابع له أو ابحث بإسم الدكتور، اعرف تقييمات المرضى للدكاترة واحجز موعدك اونلاين مجاناً.",
+      "hasChildren": true
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "ArNewsTitle": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsTitle": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "ArNewsDescription": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsDescription": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "PublishDate": "Tuesday, November 14, 2023at8:44:40 PM",
+      "LastModification": "Tuesday, November 14, 2023 at 8:44:40 PM",
+      "Tid": [
+        3,
+        1,
+        2
+      ],
+      "ImageUrl": "IMG-20230315-WA0016-768x493.jpg",
+      "Cid": "1"
+    },
+    {
+      "id": 1,
+      "ArNewsTitle": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsTitle": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "ArNewsDescription": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsDescription": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "PublishDate": "Tuesday, November 14, 2023at8:44:40 PM",
+      "LastModification": "Tuesday, November 14, 2023 at 8:44:40 PM",
+      "Tid": [
+        3,
+        1,
+        2
+      ],
+      "ImageUrl": "IMG-20230315-WA0016-768x493.jpg",
+      "Cid": "1"
+    },
+    {
+      "id": 1,
+      "ArNewsTitle": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsTitle": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "ArNewsDescription": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsDescription": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "PublishDate": "Tuesday, November 14, 2023at8:44:40 PM",
+      "LastModification": "Tuesday, November 14, 2023 at 8:44:40 PM",
+      "Tid": [
+        3,
+        1,
+        2
+      ],
+      "ImageUrl": "IMG-20230315-WA0016-768x493.jpg",
+      "Cid": "1"
+    },
+    {
+      "id": 2,
+      "ArNewsTitle": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsTitle": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "ArNewsDescription": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsDescription": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "PublishDate": "Tuesday, November 14, 2023at8:44:40 PM",
+      "LastModification": "Thursday, November 16, 2023-12:25:52 PM",
+      "Tid": [
+        3,
+        2
+      ],
+      "Cid": "1",
+      "ImageUrl": "OIP.jpg"
+    },
+    {
+      "id": 3,
+      "ArNewsTitle": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsTitle": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "ArNewsDescription": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsDescription": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "PublishDate": "Tuesday, November 14, 2023at8:44:40 PM",
+      "LastModification": "Tuesday, November 14, 2023 at 8:44:40 PM",
+      "Tid": [
+        3,
+        2,
+        1
+      ],
+      "Cid": "2",
+      "ImageUrl": "OIP (1).jpg"
+    },
+    {
+      "id": 4,
+      "ArNewsTitle": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsTitle": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "ArNewsDescription": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsDescription": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "PublishDate": "Tuesday, November 14, 2023at8:44:40 PM",
+      "LastModification": "Tuesday, November 14, 2023 at 8:44:40 PM",
+      "Tid": [
+        3
+      ],
+      "Cid": "2",
+      "ImageUrl": "vector-news-headlines-background-with-earth-planet.jpg"
+    },
+    {
+      "id": 5,
+      "ArNewsTitle": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsTitle": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "ArNewsDescription": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsDescription": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "PublishDate": "Tuesday, November 14, 2023at8:44:40 PM",
+      "LastModification": "Tuesday, November 14, 2023 at 8:44:40 PM",
+      "Tid": [
+        2,
+        1
+      ],
+      "Cid": "2",
+      "ImageUrl": "OIP.jpg"
+    },
+    {
+      "id": 6,
+      "ArNewsTitle": "مصر للطيران تعلن عن صفقة انضمام 18 طائرة جديدة من طراز بوينج B737-8MAX لأسطولها الجوي",
+      "EnNewsTitle": "EgyptAir is talking about purchasing 18 new Boeing B737-8MAX aircraft for its long range",
+      "ArNewsDescription": "asdasd",
+      "EnNewsDescription": "asdasd",
+      "PublishDate": "Sunday, November 19, 2023-10:43:04 AM",
+      "LastModification": "Sunday, November 19, 2023-10:43:04 AM",
+      "Tid": [
+        3,
+        2
+      ],
+      "Cid": "2",
+      "ImageUrl": "OIP.jpg"
+    }
+  ],
+  "questions": []
+}

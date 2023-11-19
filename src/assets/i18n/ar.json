@@ -1,0 +1,15 @@
+
+{
+    "translate":"translate",
+    "Tags":"الاوسمة",
+    "Categories":"الاقسام",
+    "News":"الأخبار",
+    "home":"الرئيسية",
+    "publishedAt":"تاريخ النشر",
+    "lastUpdate":"اخر تعديل",
+    "id":"رقم",
+    "EnCategoryName" :"الفسم",
+    "EnCategoryDescription" :"وصف القسم",
+    "hasChildren" :"لديه فروع",
+    "questions":"اسئلة متكررة"
+}
